@@ -76,7 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.projects-grid, .skills-grid, .timeline, .why-invest-grid').forEach(el => {
+    staggerObserver.observe(el);
+  });
 
   /* ---------- Project filter ---------- */
   const filterBtns = document.querySelectorAll('.filter-btn');
