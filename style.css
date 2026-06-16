@@ -421,6 +421,51 @@ ul{list-style:none}
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:20px;align-items:start;
 }
+.packs-mini-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:16px;margin-bottom:24px;
+}
+.pack-mini{
+  background:var(--color-branco);
+  border:1px solid var(--color-areia);
+  border-radius:8px;padding:22px 18px;
+  text-align:center;transition:var(--transition);
+}
+.pack-mini:hover{
+  border-color:var(--color-caramelo);
+  box-shadow:var(--shadow);
+  transform:translateY(-3px);
+}
+.pack-mini--highlight{
+  border-color:var(--color-caramelo);
+  box-shadow:0 0 0 2px var(--color-caramelo);
+}
+.pack-mini-name{
+  font-family:'Playfair Display',serif;
+  font-size:.95rem;font-weight:700;
+  color:var(--color-chocolate);margin-bottom:6px;
+}
+.pack-mini-desc{
+  font-size:.7rem;color:var(--color-cinzaQuente);
+  line-height:1.5;margin-bottom:14px;min-height:32px;
+}
+.pack-mini-price{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;font-weight:700;
+  color:var(--color-chocolate);
+}
+.pack-mini-note{
+  font-size:.65rem;color:var(--color-cinzaQuente);
+  margin-bottom:14px;
+}
+.btn-sm{padding:9px 18px;font-size:.72rem;width:100%;justify-content:center}
+.btn-sm svg{width:15px;height:15px}
+@media(max-width:1024px){
+  .packs-mini-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+  .packs-mini-grid{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto;margin-bottom:24px}
+}
 .pack-card{
   background:var(--color-branco);
   border:1px solid var(--color-areia);
@@ -437,6 +482,7 @@ ul{list-style:none}
 .pack-card.featured{
   border-color:var(--color-caramelo);
   box-shadow:0 0 0 2px var(--color-caramelo);
+  max-width:560px;margin:0 auto;
 }
 .pack-card.featured::before{
   content:'Mais popular';position:absolute;
@@ -499,6 +545,7 @@ ul{list-style:none}
 @media(max-width:768px){
   .packs-grid{grid-template-columns:1fr;gap:16px;max-width:400px;margin:0 auto}
   .pack-card{padding:22px 18px}
+  .pack-card.featured{max-width:400px}
   .pack-price{font-size:1.5rem}
   .pack-name{font-size:1.05rem}
 }
