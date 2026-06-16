@@ -2,15 +2,15 @@
    DESIGN TOKENS
    ======================================== */
 :root {
-  --color-creme:        #F8F4ED;
-  --color-marfim:        #F1E9DC;
-  --color-grafite:       #1E1A17;
-  --color-chocolate:     #2A1A14;
-  --color-pretoQuente:   #1B110D;
-  --color-terracota:     #A95F3D;
-  --color-terracotaEscuro:#8B4A2E;
-  --color-areia:         #D8CFC4;
-  --color-cinzaQuente:   #5C4F44;
+  --color-creme:        #F7F2EA;
+  --color-marfim:        #EFE7DC;
+  --color-grafite:       #1F1713;
+  --color-chocolate:     #351F16;
+  --color-pretoQuente:   #211712;
+  --color-terracota:     #B86645;
+  --color-terracotaEscuro:#9F5639;
+  --color-areia:         #D8C8BA;
+  --color-cinzaQuente:   #6F625B;
   --color-branco:        #FBF8F3;
   --color-caramelo:      #B86645;
 
@@ -333,7 +333,7 @@ ul{list-style:none}
   background:rgba(216,207,196,0.18);
 }
 .cred-icon{width:30px;height:30px;color:var(--color-terracota)}
-.cred-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.5}
+.cred-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .cred-number{
   font-family:'Playfair Display',serif;
   font-size:1.7rem;font-weight:700;color:var(--color-branco);
@@ -409,7 +409,7 @@ ul{list-style:none}
   width:38px;height:38px;margin:0 auto 18px;
   color:var(--color-terracota);
 }
-.impact-card-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.4}
+.impact-card-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .impact-card h4{
   font-family:'Playfair Display',serif;font-weight:700;
   font-size:.95rem;color:var(--color-chocolate);
@@ -445,7 +445,7 @@ ul{list-style:none}
 .service-card-icon{
   width:36px;height:36px;color:var(--color-terracota);margin-bottom:18px;
 }
-.service-card-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.4}
+.service-card-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .service-card h4{
   font-family:'Playfair Display',serif;
   font-size:1.02rem;color:var(--color-chocolate);margin-bottom:10px;
