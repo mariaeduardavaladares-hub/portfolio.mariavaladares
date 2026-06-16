@@ -143,6 +143,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Projects filter & expand ──
+  const projectsGrid = document.querySelector('.projects-grid');
+  if (projectsGrid) {
+    const cards = Array.from(projectsGrid.querySelectorAll('.project-card'));
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const toggleBtn = document.getElementById('toggleProjects');
+    const state = { filter: 'todos', expanded: false };
+
+    const applyFilter = () => {
+      cards.forEach(card => {
+        const cats = (card.dataset.cat || '').split(' ');
+        const matchesFilter = state.filter === 'todos' || cats.includes(state.filter);
+        const isFeatured = card.dataset.featured === 'true';
+        const visible = matchesFilter && (state.expanded || state.filter !== 'todos' || isFeatured);
+        card.style.display = visible ? '' : 'none';
+      });
+      if (toggleBtn) {
+        toggleBtn.style.display = (state.filter === 'todos' && !state.expanded) ? '' : 'none';
+      }
+    };
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.filter = btn.dataset.filter;
+        applyFilter();
+      });
+    });
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        state.expanded = true;
+        applyFilter();
+      });
+    }
+
+    applyFilter();
+  }
+
   // ── Smooth scroll for anchor links ──
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
