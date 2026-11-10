@@ -715,6 +715,16 @@ ul{list-style:none}
 }
 .project-card:hover .project-card-arrow{opacity:1;transform:translateY(0)}
 .project-card-arrow svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+
+.project-card-badge{
+  position:absolute;top:14px;left:14px;
+  background:var(--white);color:var(--black);
+  font-size:.62rem;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;padding:5px 11px;
+  border-radius:var(--radius);z-index:3;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
 .project-card-body{padding:22px}
 .project-card-cat{
   font-size:.6rem;font-weight:600;letter-spacing:2px;

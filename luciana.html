@@ -1,0 +1,341 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<div class="top-nav" style="border-bottom: 1px solid var(--line); padding: 14px 0; background: var(--bg); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px);">
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center;">
+    <a href="index.html#projetos" style="display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:.82rem; text-decoration:none; color:var(--ink); font-weight:500;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Voltar para o Portfólio
+    </a>
+    <a href="index.html" style="font-family:var(--mono); font-size:.78rem; text-decoration:none; color:var(--muted); letter-spacing:.1em; text-transform:uppercase;">Valadares Studio</a>
+  </div>
+</div>
+
+<title>Tastes Like Memory</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column cut by full-bleed "cake layers" (chantilly scallop edges between bands) */
+:root{
+  --bg:#FFF9F6; --ink:#2B1A17; --muted:#7A5F59; --berry:#A32834; --cream:#F7E7DF; --pink:#F3C9C4; --line:#E8D3CC; --onberry:#FFF4F1;
+  --display:"Gloock", "Georgia", serif; --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif; --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1A1112; --ink:#F6E9E4; --muted:#C2A69F; --berry:#E0606C; --cream:#2A1B1C; --pink:#5A2F33; --line:#3C2A2B; --onberry:#1A1112; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1A1112; --ink:#F6E9E4; --muted:#C2A69F; --berry:#E0606C; --cream:#2A1B1C; --pink:#5A2F33; --line:#3C2A2B; --onberry:#1A1112; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.narrow{max-width:680px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.08}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.9rem)}
+h3{font-size:1.45rem}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+.pt{font-style:italic;color:var(--muted)}
+section{padding-block:clamp(56px,9vw,104px)}
+.stack{display:flex;flex-direction:column;gap:20px}
+.stack-lg{display:flex;flex-direction:column;gap:40px}
+
+/* hero */
+.hero{padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px)}
+.hero .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px 32px;border-top:1px solid var(--line);padding-top:24px}
+.meta dt{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.meta dd{margin:4px 0 0;font-weight:500}
+.lede{font-size:clamp(1.15rem,2vw,1.35rem);max-width:640px}
+
+/* chantilly scallop band */
+.layer{background:var(--berry);color:var(--onberry);position:relative}
+.layer::before,.layer::after{content:"";position:absolute;left:0;right:0;height:18px;background:radial-gradient(circle at 18px 0,var(--bg) 17px,transparent 18px) repeat-x;background-size:36px 18px}
+.layer::before{top:0}
+.layer::after{bottom:0;transform:rotate(180deg)}
+.layer .eyebrow{color:var(--pink)}
+.layer.pinkish{background:var(--cream);color:var(--ink)}
+.layer.pinkish .eyebrow{color:var(--berry)}
+
+.big-quote{font-family:var(--display);font-size:clamp(2rem,5vw,3.6rem);line-height:1.1;text-wrap:balance}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+.num b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4.5vw,3.1rem);line-height:1;color:var(--berry);font-variant-numeric:tabular-nums}
+.num span{display:block;margin-top:8px;color:var(--muted);font-size:.98rem}
+
+/* competitor map */
+.map{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.map div{background:var(--bg);padding:20px;display:flex;flex-direction:column;gap:6px}
+.map strong{font-weight:700}
+.map span{color:var(--muted);font-size:.95rem}
+.map .free{background:var(--berry);color:var(--onberry);grid-column:1/-1}
+.map .free span{color:var(--onberry);opacity:.9}
+
+/* meanings */
+.meanings{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}
+.meanings h3{font-size:1.25rem;color:var(--berry)}
+.meanings p{color:var(--muted);font-size:.96rem;margin-top:6px}
+
+/* bars */
+.bars{display:flex;flex-direction:column;gap:12px}
+.bar{display:grid;grid-template-columns:minmax(0,220px) 1fr 3.2rem;gap:14px;align-items:center}
+.bar .t{font-size:.95rem}
+.bar .track{height:14px;background:var(--cream);border-radius:7px;overflow:hidden}
+.bar .fill{height:100%;background:var(--pink);border-radius:7px}
+.bar.top .fill{background:var(--berry)}
+.bar .v{font-family:var(--mono);font-size:.9rem;text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.bar{grid-template-columns:1fr 3rem}.bar .t{grid-column:1/-1}}
+
+/* strategy ladder */
+.ladder{display:grid;gap:0;border-top:1px solid var(--line)}
+.rung{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:20px;padding-block:22px;border-bottom:1px solid var(--line)}
+.rung dt{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:6px}
+.rung dd{margin:0}
+.rung .display{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.15}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{border:1px solid var(--berry);color:var(--berry);border-radius:999px;padding:4px 14px;font-size:.92rem}
+@media (max-width:560px){.rung{grid-template-columns:1fr;gap:6px}}
+
+/* naming */
+.names{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.name{border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.name .route{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.name h3{font-size:1.7rem}
+.name .slogan{font-style:italic}
+.name .en{color:var(--muted);font-size:.92rem}
+.swatch{display:flex;gap:6px;margin-top:auto;padding-top:6px}
+.swatch i{width:26px;height:26px;border-radius:6px;border:1px solid rgba(0,0,0,.08);display:block}
+.name.rec{border-color:var(--berry);box-shadow:0 0 0 1px var(--berry) inset}
+.name.rec .route{color:var(--berry)}
+
+/* campaign phases */
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;counter-reset:ph}
+.phase{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--onberry);padding-top:16px}
+.phase .step{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pink)}
+.phase h3{font-size:1.4rem}
+
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.pillars div{display:flex;flex-direction:column;gap:4px}
+.pillars strong{font-weight:700}
+.pillars span{color:var(--muted);font-size:.95rem}
+
+.role{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 32px;padding:0;margin:0;list-style:none}
+.role li{padding-left:22px;position:relative}
+.role li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--berry)}
+
+.sources{font-size:.85rem;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.sources a{color:inherit}
+footer{border-top:1px solid var(--line);padding-block:32px 48px;font-size:.95rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+a:focus-visible{outline:2px solid var(--berry);outline-offset:3px}
+</style>
+
+<header class="hero">
+  <div class="wrap stack-lg">
+    <div class="stack">
+      <p class="eyebrow">Brand strategy case · Brasília, Brazil · 2026</p>
+      <h1>A cake that tastes like memory.</h1>
+      <p class="pt">Bolo com gosto de lembrança.</p>
+      <p class="lede">Building a brand from zero for a home baker who makes the tall, cream-loaded party cakes Brazilians grew up with. The strategy turned nostalgia into her main advantage against chains, bakeries and Instagram cake designers.</p>
+    </div>
+    <dl class="meta">
+      <div><dt>Client</dt><dd>Luciana, home baker and grandmother</dd></div>
+      <div><dt>My role</dt><dd>Brand & creative strategy, naming, visual direction</dd></div>
+      <div><dt>Scope</dt><dd>Research, positioning, naming, launch campaign, content plan</dd></div>
+      <div><dt>Studio</dt><dd>Valadares Studio</dd></div>
+    </dl>
+  </div>
+</header>
+
+<section class="layer">
+  <div class="wrap narrow stack">
+    <p class="eyebrow">Where it started</p>
+    <p class="big-quote">“Tia, pode fazer um bolo?”</p>
+    <p>“Auntie, could you make a cake?” A friend of her son was grieving and only wanted a cake. Luciana baked it. That request became the origin of the brand, and the clue to what her cakes really do for people.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">The challenge</p>
+      <h2>A crowded, growing market with no place for her yet.</h2>
+      <p>Luciana had talent, a loyal circle and no brand: no name, no positioning, no plan to sell. The brief was to understand the market, find what makes her cake different, propose a name and identity, and build a content plan to start selling.</p>
+    </div>
+    <div class="nums">
+      <div class="num"><b>R$ 10 bi</b><span>a year spent on homemade cakes in Brazil</span></div>
+      <div class="num"><b>3.5–5%</b><span>yearly growth of the category</span></div>
+      <div class="num"><b>600+</b><span>stores in the largest homemade-cake chain, expanding into Brasília</span></div>
+      <div class="num"><b>75%</b><span>of people who bake cakes for a living are women, 58% from home</span></div>
+    </div>
+    <div class="stack">
+      <h3>Competitive landscape</h3>
+      <div class="map">
+        <div><strong>Franchise chains</strong><span>Scale and price, but standardised and faceless.</span></div>
+        <div><strong>Bakeries</strong><span>Beautiful windows, gourmet cakes, little story.</span></div>
+        <div><strong>Cake designers</strong><span>Big, expensive party cakes. R$ 175 to R$ 835 in São Paulo.</span></div>
+        <div><strong>Instagram bakers</strong><span>Many, and looking more alike every month.</span></div>
+        <div class="free"><strong>The white space</strong><span>A generous, homemade party cake made by a real person, at a fair price. Nobody owned it.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="layer pinkish">
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">Cultural insight</p>
+      <h2>For Brazilians, cake is never just dessert.</h2>
+    </div>
+    <div class="meanings">
+      <div><h3>Celebration</h3><p>The birthday, the win, the family party.</p></div>
+      <div><h3>Comfort</h3><p>The cake that arrives when words run out.</p></div>
+      <div><h3>Gratitude</h3><p>A way to say thank you without a speech.</p></div>
+      <div><h3>Memory</h3><p>The taste of grandma’s house and childhood.</p></div>
+      <div><h3>Sharing</h3><p>Made to be cut and divided.</p></div>
+    </div>
+    <div class="stack narrow">
+      <p class="eyebrow">Human insight</p>
+      <p class="big-quote">When we don’t know what to say, we bring a cake.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">The cultural tension</p>
+      <h2>The world got fast. People started missing things.</h2>
+      <p>Vinyl, flip phones, rerun soap operas, family recipes. People are returning to things made slowly and full of history. Luciana already makes exactly what people are looking for: the 2000s party cake, tall and layered, with whipped cream and fruit, no fondant and no trends.</p>
+    </div>
+    <div class="nums">
+      <div class="num"><b>US$ 1 bi</b><span>in US vinyl sales in 2025, the highest since 1983</span></div>
+      <div class="num"><b>56.8%</b><span>of Brazilians have bought something driven by nostalgia</span></div>
+      <div class="num"><b>45%</b><span>buy more when a brand references the past</span></div>
+    </div>
+    <div class="stack">
+      <h3>Why people buy what feels old</h3>
+      <div class="bars" role="list">
+        <div class="bar top" role="listitem"><span class="t">Affective memory</span><span class="track"><span class="fill" style="width:100%;display:block"></span></span><span class="v">42%</span></div>
+        <div class="bar" role="listitem"><span class="t">Emotional bond with the brand</span><span class="track"><span class="fill" style="width:54.5%;display:block"></span></span><span class="v">23%</span></div>
+        <div class="bar" role="listitem"><span class="t">Comfort and closeness</span><span class="track"><span class="fill" style="width:47.6%;display:block"></span></span><span class="v">20%</span></div>
+        <div class="bar" role="listitem"><span class="t">Following the trend</span><span class="track"><span class="fill" style="width:18.1%;display:block"></span></span><span class="v">8%</span></div>
+        <div class="bar" role="listitem"><span class="t">Belonging to an era</span><span class="track"><span class="fill" style="width:16.4%;display:block"></span></span><span class="v">7%</span></div>
+      </div>
+      <p class="narrow">It is not nostalgia for things. It is nostalgia for people. A cake like the ones from back then is a way to bring someone back to the table.</p>
+    </div>
+  </div>
+</section>
+
+<section class="layer">
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">The strategy</p>
+      <p class="big-quote">Chains sell cake. Luciana sells memory.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack-lg">
+    <dl class="ladder">
+      <div class="rung"><dt>Positioning</dt><dd><p class="display">The party cake made the old way, at home, to bring family memories back in happy moments and hard ones.</p></dd></div>
+      <div class="rung"><dt>Strategic concept</dt><dd><p class="display">A cake that tastes like memory.</p><p class="pt">Bolo com gosto de lembrança.</p></dd></div>
+      <div class="rung"><dt>Brand role</dt><dd><p class="display">The kindest way to say happy birthday, thank you, I’m sorry and I’m here.</p><p class="pt">Every cake goes out with a handwritten card.</p></dd></div>
+      <div class="rung"><dt>Values</dt><dd><div class="chips"><span class="chip">Memory</span><span class="chip">Abundance</span><span class="chip">Care</span><span class="chip">Faith</span></div></dd></div>
+      <div class="rung"><dt>Audience</dt><dd><p>Nostalgic families aged 30 to 55 who want the cake from their childhood; people looking after someone, in joy or grief; the church, neighbourhood and work circles where word of mouth happens; fair-goers who try a slice and come back to order.</p></dd></div>
+      <div class="rung"><dt>Tone of voice</dt><dd><p>Warm, generous, simple, joyful, faithful with a light touch. Never gourmet, cold, preachy or full of English.</p></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="layer pinkish">
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">Naming</p>
+      <h2>Six routes, each with its own slogan and palette.</h2>
+      <p>Every route was checked against existing businesses in Brazil and flagged for trademark search before registration.</p>
+    </div>
+    <div class="names">
+      <article class="name"><p class="route">Route 1 · Personal signature</p><h3>Luci Cake</h3><p class="slogan">“Feito pela Luci, do jeito que você lembra.”</p><p class="en">Made by Luci, just the way you remember.</p><div class="swatch" aria-label="Palette"><i style="background:#B8323E"></i><i style="background:#F3C9C4"></i><i style="background:#FBF4EA"></i><i style="background:#5E7A4A"></i><i style="background:#3B2622"></i></div></article>
+      <article class="name rec"><p class="route">Route 2 · Faith and joy · Recommended</p><h3>Bendito Bolo</h3><p class="slogan">“Abençoado em cada fatia.”</p><p class="en">“Blessed Cake.” Blessed in every slice. Faith, humour and category in one Portuguese name.</p><div class="swatch" aria-label="Palette"><i style="background:#3E2723"></i><i style="background:#A8643C"></i><i style="background:#D9A441"></i><i style="background:#F2E4CC"></i><i style="background:#FAF6EF"></i></div></article>
+      <article class="name"><p class="route">Route 3 · Everyday faith</p><h3>Bolo Nosso</h3><p class="slogan">“O bolo nosso de cada festa.”</p><p class="en">From “our daily bread”: our cake for every party.</p><div class="swatch" aria-label="Palette"><i style="background:#6B2D3C"></i><i style="background:#C99A97"></i><i style="background:#F4E9E4"></i><i style="background:#B9A88E"></i><i style="background:#2E1A20"></i></div></article>
+      <article class="name"><p class="route">Route 4 · Family nickname</p><h3>Bô Lu</h3><p class="slogan">“Bolo de vó, com carinho de Lu.”</p><p class="en">Grandma’s cake, with Lu’s love. The way grandkids would say it.</p><div class="swatch" aria-label="Palette"><i style="background:#2C3C6B"></i><i style="background:#B5282F"></i><i style="background:#C9D6EA"></i><i style="background:#F5D77E"></i><i style="background:#FFFBF3"></i></div></article>
+      <article class="name"><p class="route">Route 5 · Parisian inspiration</p><h3>Loulou • Bolos</h3><p class="slogan">“Um mimo de antigamente.”</p><p class="en">A little treat from the old days, with “Lu” inside the name.</p><div class="swatch" aria-label="Palette"><i style="background:#E7A9B4"></i><i style="background:#7A2E3A"></i><i style="background:#B9D8C2"></i><i style="background:#C9A45C"></i><i style="background:#F6EBDD"></i></div></article>
+      <article class="name"><p class="route">Route 6 · Faith and gratitude</p><h3>Graças ao Bolo</h3><p class="slogan">“Graças ao bolo, a família se junta.”</p><p class="en">“Thanks to the cake”, a play on “thank God”. Thanks to the cake, the family gets together.</p><div class="swatch" aria-label="Palette"><i style="background:#B23A2E"></i><i style="background:#D9A13B"></i><i style="background:#7B4A2B"></i><i style="background:#6E8B4E"></i><i style="background:#F4ECDD"></i></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="layer">
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">Launch campaign</p>
+      <p class="big-quote">Who would you bring a cake to?</p>
+      <p>Campaign POV: make Brasília think of Luciana whenever someone needs to say happy birthday, thank you, I’m sorry or I’m here.</p>
+    </div>
+    <div class="phases">
+      <div class="phase"><p class="step">Phase 1 · Teaser</p><h3>The origin story</h3><p>Luciana tells the “Auntie, could you make a cake?” story on video, before the name is revealed.</p></div>
+      <div class="phase"><p class="step">Phase 2 · Launch</p><h3>Name and menu</h3><p>The name and menu go live and orders open on WhatsApp.</p></div>
+      <div class="phase"><p class="step">Phase 3 · Sustain</p><h3>A cake a week</h3><p>People share who they would bring a cake to. Every week Luciana delivers one, with a handwritten card.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">Content strategy</p>
+      <h2>Real kitchen, real hands, real stories.</h2>
+      <p>No stock photos or shop-window cakes. Window light in Luciana’s kitchen, her hands always in frame, the cut cake showing the filling, and the handwritten card as signature.</p>
+    </div>
+    <div class="pillars">
+      <div><strong>In Luciana’s kitchen</strong><span>Behind the scenes, process and her hands.</span></div>
+      <div><strong>A cake for every moment</strong><span>Menu by occasion: birthday, comfort, gratitude.</span></div>
+      <div><strong>Who received one</strong><span>Real stories from people who got a cake, with permission.</span></div>
+      <div><strong>Faith and affection</strong><span>Messages of care and faith, without preaching.</span></div>
+      <div><strong>Where to find her</strong><span>Street fairs, cake jars and orders.</span></div>
+    </div>
+    <p class="narrow">First month mapped week by week across Reels, carousels, daily Stories, WhatsApp Business and local fairs, followed by a launch checklist: trademark and handle checks, a menu of four to six signature cakes, full identity and health permits.</p>
+  </div>
+</section>
+
+<section class="layer pinkish">
+  <div class="wrap stack-lg">
+    <div class="stack narrow">
+      <p class="eyebrow">What I did</p>
+      <h2>From a single request to a brand ready to launch.</h2>
+    </div>
+    <ul class="role">
+      <li>Market and competitor research</li>
+      <li>Cultural and trend research on nostalgia</li>
+      <li>Human insight and positioning</li>
+      <li>Strategic concept and brand role</li>
+      <li>Naming, slogans and palettes</li>
+      <li>Tone of voice and visual direction</li>
+      <li>Launch campaign idea</li>
+      <li>Content pillars and first-month plan</li>
+    </ul>
+    <p class="narrow">Status: strategy presented in November 2026. The client is choosing between the name routes before identity design starts.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow stack">
+    <p class="eyebrow">Sources</p>
+    <div class="sources">
+      <p>Vinyl: RIAA year-end report 2025. Nostalgia in Brazil: PiniOn survey, September 2025, 1,543 respondents. Reasons for buying nostalgic products: Mission Brasil survey via Propmark, March 2025. Comfort food and loneliness: Troisi &amp; Gabriel, Psychological Science, 2011. Market and chain figures from Brazilian trade press, 2024 to 2025.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px;">
+    <span>Maria Eduarda Valadares · Brand &amp; Creative Strategist</span>
+    <span>Valadares Studio · @mevaladares</span>
+    <a href="https://wa.me/5561993389338?text=Ol%C3%A1%2C%20vi%20o%20case%20da%20Luciana%20e%20gostaria%20de%20conversar!" target="_blank" style="color:var(--berry); font-weight:600; text-decoration:none;">Falar no WhatsApp &rarr;</a>
+  </div>
+</footer>
+
+</body></html>
