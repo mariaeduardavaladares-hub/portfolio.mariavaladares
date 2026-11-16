@@ -2218,3 +2218,24 @@ body {
   .hero-buttons .btn-outline{padding:12px 20px !important}
   .hero-buttons .btn-linkedin{padding:12px 18px !important}
 }
+
+/* ============================================================
+   RESPONSIVO MOBILE — correcoes. O bloco de redesign acima usa
+   !important sem media query, entao o mobile precisa reforcar
+   com !important para colapsar a navbar e conter o overflow. (nov/2026)
+   ============================================================ */
+@media(max-width:768px){
+  html,body{overflow-x:hidden !important;}
+  /* navbar colapsa para o menu hamburguer */
+  .nav-links{display:none !important;}
+  .nav-toggle{display:flex !important;}
+  .nav-logo-text{display:none !important;}
+  /* selo do hero: centralizado e dentro da tela */
+  .hero-badge{
+    left:50% !important;right:auto !important;
+    transform:translateX(-50%) !important;
+    bottom:12px !important;white-space:nowrap !important;max-width:92vw !important;
+  }
+  /* faixa de numeros em 2 colunas no celular */
+  .strip-grid{grid-template-columns:repeat(2,1fr) !important;}
+}
