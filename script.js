@@ -109,7 +109,29 @@ const I18N = {
     proj_brb_desc: "Campanha para os cartões premium BRB DUX e Visa Infinite, comunicando benefícios exclusivos.",
     
     // Experience
-    exp_eyebrow: "Trajetória & Perfil Profissional",
+        // Timeline badges
+    badge_agency: "Agência",
+    badge_studio: "Estúdio Autoral",
+    badge_degree: "Graduação",
+    badge_spec: "Especialização",
+    exp_linkedin_subtitle: "Atendimento Publicitário na Cálix Propaganda · Brand Strategy · Design Estratégico · UX/UI",
+    
+    // Packs Accordion Details
+    pack_detail_head: "O que você recebe",
+    pack_ess_d1: "Planejamento de conteúdo do mês: linha editorial, temas e cronograma",
+    pack_ess_d2: "10 cards para feed e stories, dentro da identidade da marca",
+    pack_ess_d3: "Até 2 rodadas de ajuste por peça",
+    pack_ess_d4: "Alinhamento direto por mensagem em horário comercial",
+    pack_strat_d1: "Tudo do Essencial",
+    pack_strat_d2: "20 cards para feed e stories",
+    pack_strat_d3: "3 reels com roteiro e edição profissional",
+    pack_strat_d4: "Gravação no local 1x no mês (até 2 horas)",
+    pack_comp_d1: "Tudo do Estratégico",
+    pack_comp_d2: "Reunião mensal de estratégia (30 minutos)",
+    pack_comp_d3: "Até 4 demandas pontuais por mês (artes extras de campanha)",
+    pack_comp_d4: "Prioridade de prazo nas entregas",
+    pack_combo_includes_val: "ID Visual completa + Site responsivo + 3 meses de acompanhamento.",
+exp_eyebrow: "Trajetória & Perfil Profissional",
     exp_title: "Experiência, atendimento e <em>formação.</em>",
     
     exp1_date: "Mar 2026 — Presente · Tempo integral",
@@ -266,7 +288,29 @@ const I18N = {
     proj_brb_desc: "Digital campaign for BRB's ultra-premium credit cards (DUX and Visa Infinite), highlighting exclusive lifestyle benefits.",
     
     // Experience
-    exp_eyebrow: "Experience & Background",
+        // Timeline badges
+    badge_agency: "Agency",
+    badge_studio: "Independent Studio",
+    badge_degree: "Bachelor's Degree",
+    badge_spec: "Specialization",
+    exp_linkedin_subtitle: "Account Assistant at Cálix Propaganda · Brand Strategy · Strategic Design · UX/UI",
+    
+    // Packs Accordion Details
+    pack_detail_head: "What's included",
+    pack_ess_d1: "Monthly content planning: editorial pillars, topics, and schedule",
+    pack_ess_d2: "10 cards for feed & stories, matching brand identity",
+    pack_ess_d3: "Up to 2 review rounds per piece",
+    pack_ess_d4: "Direct alignment via messaging during business hours",
+    pack_strat_d1: "Everything in Essential",
+    pack_strat_d2: "20 cards for feed & stories",
+    pack_strat_d3: "3 Reels with scriptwriting & professional editing",
+    pack_strat_d4: "On-site video recording 1x/month (up to 2h)",
+    pack_comp_d1: "Everything in Strategic",
+    pack_comp_d2: "Monthly strategy review meeting (30 mins)",
+    pack_comp_d3: "Up to 4 ad-hoc campaign design assets per month",
+    pack_comp_d4: "Priority turnaround time on deliverables",
+    pack_combo_includes_val: "Complete Visual Identity + Responsive Website + 3 months of ongoing social media.",
+exp_eyebrow: "Experience & Background",
     exp_title: "Career, account management & <em>education.</em>",
     
     exp1_date: "Mar 2026 — Present · Full-time",
