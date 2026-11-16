@@ -406,6 +406,8 @@ ul{list-style:none}
   display:grid;grid-template-columns:repeat(3,1fr);
   gap:20px;align-items:start;
 }
+.packs-tri-grid--duo{max-width:760px;margin-left:auto;margin-right:auto}
+@media(min-width:901px){.packs-tri-grid--duo{grid-template-columns:repeat(2,1fr)}}
 .pack-mini{
   background:var(--white);
   border:1px solid var(--black);
@@ -2163,4 +2165,56 @@ body {
 .scroll-top:hover {
   background: #ffffff !important;
   color: #000000 !important;
+}
+
+/* ============================================================
+   AJUSTES — Projetos (Luciana em destaque), Planos (Estratégico
+   maior) e Botões do hero alinhados. (nov/2026)
+   ============================================================ */
+
+/* --- Projeto em destaque: Tastes Like Memory — Luciana --- */
+@media(min-width:769px){
+  .project-card--hero{
+    grid-column:1 / -1;
+    display:grid !important;
+    grid-template-columns:1.08fr 1fr;
+    align-items:stretch;
+  }
+  .project-card--hero .project-card-img{
+    height:100% !important;
+    min-height:380px;
+  }
+  .project-card--hero .project-card-body{
+    padding:48px 46px !important;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .project-card--hero .project-card-cat{font-size:.82rem !important;letter-spacing:1.4px}
+  .project-card--hero .project-card-title{font-size:2rem !important;line-height:1.1}
+  .project-card--hero .project-card-desc{font-size:1rem !important;max-width:50ch;margin-bottom:20px}
+  .project-card--hero .project-card-link{font-size:.9rem !important}
+}
+.project-card--hero .project-card-badge{top:18px;left:18px}
+
+/* --- Planos mensais: Estratégico maior e em destaque --- */
+.packs-tri-grid--duo{max-width:860px}
+@media(min-width:901px){
+  .packs-tri-grid--duo{grid-template-columns:1fr 1fr;align-items:center;gap:26px}
+  .packs-tri-grid--duo .pack-mini--highlight{
+    transform:scale(1.05);
+    padding:34px 30px;
+    box-shadow:0 26px 60px rgba(0,0,0,.14) !important;
+    border:2px solid var(--black) !important;
+    z-index:2;position:relative;
+  }
+  .packs-tri-grid--duo .pack-mini--highlight .pack-mini-name{font-size:1.35rem}
+  .packs-tri-grid--duo .pack-mini--highlight .pack-mini-price{font-size:2.2rem}
+}
+
+/* --- Hero: os 3 botões alinhados na mesma linha --- */
+@media(min-width:1025px){
+  .hero-buttons{flex-wrap:nowrap !important;gap:12px !important}
+  .hero-buttons .btn{white-space:nowrap}
+  .hero-buttons .btn-primary{padding:12px 22px !important}
+  .hero-buttons .btn-outline{padding:12px 20px !important}
+  .hero-buttons .btn-linkedin{padding:12px 18px !important}
 }
